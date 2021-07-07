@@ -5,6 +5,7 @@ module:
  stages:
   build:
     steps:
+    build_cotainer: "maven:latest"
       -use: "maven"
       label: "Build"
       with_params:
