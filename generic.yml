@@ -1,0 +1,13 @@
+module:
+  git:
+  gitlab:
+    credentialsId: ""
+ stages:
+  build:
+    steps:
+      -use: "maven"
+      label: "Build"
+      with_params:
+        java_tool: "{{java}}"
+        maven_tool:  "{{maven}}"
+        goal: "{{vars.build_maven_goal}}"
